@@ -11,32 +11,69 @@ module.exports = (sequelize) => {
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
     },
-    idPoke: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-    },
+
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
+      validate: {
+        len: [0, 20]
+      }
     },
-    vida: {
-      type: DataTypes.INTEGER
+    hp: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        min: 0,
+        max: 999
+      }
     },
-    fuerza: {
-      type: DataTypes.INTEGER
+    attack: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        min: 0,
+        max: 999
+      }
     },
-    defensa: {
-      type: DataTypes.INTEGER
+    defense: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        min: 0,
+        max: 999
+      }
     },
-    velocidad: {
-      type: DataTypes.INTEGER
+    speed: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        min: 0,
+        max: 999
+      }
     },
-    altura: {
-      type: DataTypes.FLOAT
+    height:{
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        min: 0,
+        max: 999
+      }
     },
-    peso: {
-      type: DataTypes.FLOAT
-    }
+    weight:{
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        min: 0,
+        max: 9999
+      }
+    },
+    image: {
+      type: DataTypes.STRING,
+    },
+  },
+  {
+    timestamps: false,
   });
 };
 
