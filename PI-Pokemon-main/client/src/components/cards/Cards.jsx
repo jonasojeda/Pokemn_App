@@ -4,7 +4,7 @@ import Card from '../card/Card'
 export default function Cards({}) {
   return (
     <div>Cards
-        <Card/>
+
     </div>
     
   )
