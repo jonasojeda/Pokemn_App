@@ -1,8 +1,8 @@
 import React from 'react';
 import {Route, Switch, Redirect} from 'react-router'
 import './App.css';
-import LandingPage from './components/landingPage/LandingPage.jsx';
-import Home from './components/home/Home.jsx';
+import LandingPage from './pages/landingPage/LandingPage.jsx';
+import Home from './pages/home/Home.jsx';
 
 function App() {
   return (

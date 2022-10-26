@@ -1,5 +1,5 @@
 import React from 'react'
-import Cards from '../cards/Cards'
+import Cards from '../../components/cards/Cards'
 
 export default function Home() {
 return (
