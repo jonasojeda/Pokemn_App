@@ -1,4 +1,5 @@
 const axios = require('axios');
+const {Pokemon, Type} = require('../db')
 const {API_POKEMON, API_POKEMON_NAME_OR_ID}= require('../utils/utils.js')
 
 
