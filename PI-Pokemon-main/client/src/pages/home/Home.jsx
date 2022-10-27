@@ -1,22 +1,19 @@
 import React, { useEffect } from 'react';
-import { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { getPokemons } from '../../actions/actions.js';
 import Cards from '../../components/cards/Cards.jsx'
 export default function Home() {
 
-    const [pokes, setPokes] = useState([])
+    const dispatch = useDispatch();
+    const totalPoke = useSelector(state => state.pokemonsTotal)
 
-    useEffect(()=>{
-        fetch("http://localhost:3001/pokemons")
-        .then(data => data.json())
-        .then(data => data.map(p => console.log(p)))
-    },[])
+    useEffect( () => {
+        dispatch(getPokemons())
+    }, [dispatch])
 
 return (
     <div>
-        
-        <Cards/>
+        <Cards pokemons={totalPoke} />
     </div>
 )
 }
