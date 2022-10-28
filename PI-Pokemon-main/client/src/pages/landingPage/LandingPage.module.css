@@ -1,0 +1,14 @@
+.background{
+    background-image:url(../../img/4167709.webp) ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.container{
+    display: flex;
+}

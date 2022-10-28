@@ -3,14 +3,13 @@ import { useEffect, useState } from 'react';
 import Card from '../card/Card'
 
 export default function Cards({pokemons}) {
-  let init = 0;
-  let end = 11
-  let partpokemons=pokemons.splice(0,10)
-  const [pokeCurrent, setPokeCurrent] = useState(pokemons);   //lo cargo
+  
 
+  const [pokeCurrent, setPokeCurrent] = useState(pokemons);   //lo cargo
+  let cards= 12
   useEffect(()=>{
     if(!setPokeCurrent.length){
-      setPokeCurrent([...pokemons].splice(init,end))//copia pokemons
+      setPokeCurrent([...pokemons].slice(cards))//copia pokemons
     }else{
       console.log(pokemons[0])
     }
@@ -18,7 +17,7 @@ export default function Cards({pokemons}) {
   })
   return (
     <div>
-      {partpokemons.map(p => {
+      {pokemons.map(p => {
         return <Card
         id = {p.id}
         name = {p.name}
