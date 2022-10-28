@@ -1,29 +1,37 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import Card from '../card/Card'
+import s from './Cards.module.css'
 
 export default function Cards({pokemons}) {
   
+  const [currentPokemons, setCurrentPokemons] = useState(0)
 
-  const [pokeCurrent, setPokeCurrent] = useState(pokemons);   //lo cargo
-  let cards= 12
-  useEffect(()=>{
-    if(!setPokeCurrent.length){
-      setPokeCurrent([...pokemons].slice(cards))//copia pokemons
-    }else{
-      console.log(pokemons[0])
+  const subList = pokemons.slice(currentPokemons, currentPokemons+12)
+
+  const nextPage=()=>{
+    setCurrentPokemons(currentPokemons+12)
+  } 
+  const prevPage = ()=>{
+    if(currentPokemons>0){
+      setCurrentPokemons(currentPokemons-12)
     }
-      
-  })
+    
+  }
+
   return (
     <div>
-      {pokemons.map(p => {
+      <button onClick={nextPage} >Next</button>
+      <button onClick={prevPage} >Prev</button>
+      <div className={s.container}>
+      {subList.map(p => {
         return <Card
         id = {p.id}
         name = {p.name}
         img= {p.sprite}
         />
       })}
+      </div>
     </div>
     
   )
