@@ -4,7 +4,7 @@ import Cards from '../cards/Cards'
 import Search from '../search/Search';
 
 export default function Pokedex({totalPoke}) {
-    const cards = 9;
+    const cards = 12;
     const [pokeCurrent, setPokeCurrent] = useState(totalPoke);   //lo cargo
     
     useEffect( () => {
@@ -14,7 +14,8 @@ export default function Pokedex({totalPoke}) {
     return (
         <div>
             <Search setPokeCurrent={setPokeCurrent}/>
-            {/* <Cards pokemons={totalPoke} /> */}
+            {console.log(pokeCurrent)}
+            <Cards pokeCurrent={pokeCurrent} />
         </div>
     )
 }
