@@ -6,11 +6,6 @@ export default function NavBar() {
     return (
         <header>
             <h1>NavBar</h1>
-            <div className={s.searChontainer}>
-            <label>Search</label>
-            <input type="text" placeholder='Search' />
-            </div>
-            
         </header>
     
     )

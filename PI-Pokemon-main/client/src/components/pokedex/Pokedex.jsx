@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import Cards from '../cards/Cards'
+import Search from '../search/Search';
 
 export default function pokedex({totalPoke}) {
     const cards = 9;
