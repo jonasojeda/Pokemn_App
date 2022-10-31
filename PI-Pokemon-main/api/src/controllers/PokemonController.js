@@ -99,7 +99,7 @@ const getPokeByName = async (name) => {
             }
             return pokedbName;
         }else {
-            const searchPokeapiName = await axios.get(`${URL_API_POKEMON_NAME_OR_ID}${name.toLowerCase()}`);       //obtengo el pokemon de la url/name
+            const searchPokeapiName = await axios.get(`${API_POKEMON_NAME_OR_ID}${name.toLowerCase()}`);       //obtengo el pokemon de la url/name
             const foundPokeapiName = objPokeApi(searchPokeapiName.data);
             // console.log('foundPokeapi', foundPokeapiName)
             return foundPokeapiName
