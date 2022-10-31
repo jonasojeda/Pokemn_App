@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import Cards from '../cards/Cards'
 import Search from '../search/Search';
+import TypesPokemon from '../typesPokemon/TypesPokemon';
 
 export default function Pokedex({totalPoke}) {
     const cards = 12;
@@ -14,7 +15,7 @@ export default function Pokedex({totalPoke}) {
     return (
         <div>
             <Search setPokeCurrent={setPokeCurrent}/>
-            {console.log(pokeCurrent)}
+            <TypesPokemon setPokeCurrent={setPokeCurrent} />
             <Cards pokeCurrent={pokeCurrent} />
         </div>
     )
