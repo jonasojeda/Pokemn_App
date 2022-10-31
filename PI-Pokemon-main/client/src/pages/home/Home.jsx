@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { getPokemons } from '../../actions/actions.js';
-import Cards from '../../components/cards/Cards.jsx'
 import NavBar from '../../components/navBar/NavBar.jsx';
+import Pokedex from '../../components/pokedex/Pokedex.jsx';
 import s from './Home.module.css'
 export default function Home() {
 
@@ -15,10 +15,8 @@ export default function Home() {
 
 return (
     <div>
-        <div className={s.background}>
-            <NavBar/> 
-            <Cards pokemons={totalPoke} />
-        </div>
+        <NavBar/>
+        <Pokedex totalPoke = {totalPoke} /> 
     </div>
 )
 }
