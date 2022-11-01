@@ -1,17 +1,17 @@
-import React from 'react'
+import React,{ useState } from 'react'
 
-export default function Pagination({ pokeTotal, setPokeCurrent }) {
+export default function Pagination({ totalPoke, setPokeCurrent }) {
 
-    const cards = 9;
+    const cards = 12;
     const [currentPag, setCurrentPag] = useState(0);
 
 
     const next = () => {
-        const totalPoke = pokeTotal.length
+        const totalPokemons = totalPoke.length
         const next = currentPag + 1
         const index = next * cards
-        if (index > totalPoke) return;
-        setPokeCurrent([...pokeTotal].splice(index, cards))
+        if (index > totalPokemons) return;
+        setPokeCurrent([...totalPoke].splice(index, cards))
         setCurrentPag(next)
     };
 
@@ -19,17 +19,18 @@ export default function Pagination({ pokeTotal, setPokeCurrent }) {
         const prev = currentPag - 1
         if (prev < 0) return;
         const index = prev * cards
-        setPokeCurrent([...pokeTotal].splice(index, cards))
+        setPokeCurrent([...totalPoke].splice(index, cards))
         setCurrentPag(prev)
     };
 
-return (
+  return (
     <div>
-            <div className='prev-next'>
-                <button onClick={()=>prev()}>Prev</button>
+        <div>
+        <button onClick={()=>prev()}>Prev</button>
                 <label> {currentPag + 1}  </label>
                 <button onClick={()=>next()}>Next</button>
-            </div>
         </div>
-    )
+    </div>
+  )
 }
+
