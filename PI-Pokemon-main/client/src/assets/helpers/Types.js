@@ -18,23 +18,23 @@ const dark = 'https://cdn2.bulbagarden.net/upload/thumb/e/e3/DarkIC.png/70px-Dar
 const fairy = 'https://cdn2.bulbagarden.net/upload/thumb/3/31/FairyIC.png/70px-FairyIC.png';
 
 const img = {
-	bug,
-	dark,
-	dragon,
-	electric,
-	fairy,
-	fighting,
-	fire,
-	flying,
-	ghost,
-	grass,
-	ground,
-	ice,
 	normal,
+	fighting,
+	flying,
 	poison,
-	psychic,
+	ground,
 	rock,
+	bug,
+	ghost,
 	steel,
-	water
+	fire,
+	water,
+	grass,
+	electric,
+	psychic,
+	ice,
+	dragon,
+	dark,
+	fairy
 }
 export default img;
