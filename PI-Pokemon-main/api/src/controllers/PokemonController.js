@@ -38,7 +38,7 @@ const getAllPoke = async () => {
     try {
         const apiPokeData = await getPokeapi();
         const dbPokeData = await getPokedb();
-        // console.log(dbPokeData)
+        //console.log(dbPokeData)
         return [...apiPokeData, ...dbPokeData];
 
     } catch (error) {
