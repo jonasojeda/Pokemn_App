@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import Cards from '../cards/Cards'
+import Clean from '../clean/Clean';
 import Search from '../search/Search';
 import TypesPokemon from '../typesPokemon/TypesPokemon';
 
@@ -16,6 +17,7 @@ export default function Pokedex({totalPoke}) {
         <div>
             <Search setPokeCurrent={setPokeCurrent}/>
             <TypesPokemon setPokeCurrent={setPokeCurrent} />
+            <Clean/>
             <Cards pokeCurrent={pokeCurrent} />
         </div>
     )
