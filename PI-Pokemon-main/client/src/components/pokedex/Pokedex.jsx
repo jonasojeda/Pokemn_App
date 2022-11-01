@@ -5,6 +5,7 @@ import Clean from '../clean/Clean';
 import Search from '../search/Search';
 import TypesPokemon from '../typesPokemon/TypesPokemon';
 import Pagination from '../pagination/Pagination'
+import Sort from '../Sort/Sort';
 
 export default function Pokedex({totalPoke}) {
     const cards = 12;
@@ -18,6 +19,7 @@ export default function Pokedex({totalPoke}) {
         <div>
             <Search setPokeCurrent={setPokeCurrent}/>
             <TypesPokemon setPokeCurrent={setPokeCurrent} />
+            <Sort/>
             <Clean/>
             <Cards pokeCurrent={pokeCurrent} />
             <Pagination totalPoke={totalPoke} setPokeCurrent={setPokeCurrent} />
