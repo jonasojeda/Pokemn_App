@@ -129,11 +129,10 @@ export default function Form() {
                         </select>
                     </div>
 
-                    {/* <div className="dropdown">
-                        <label htmlFor="">Link img</label>
-                        <input
-                            type='textarea' name='sprite' onChange={handleInputChange} value={input.sprite} placeholder='Link img' min="0" max="255" required className='inputCreate' />
-                    </div> */}
+                    {/* Photo */}
+                    <div>
+                        <input type="text" placeholder="Image" name="sprite" onChange={handleInputChange} value={input.sprite}/>
+                    </div>
 
                     <div>
                         <button type='submit' className='action-button'> Create </button>

@@ -76,6 +76,7 @@ export const addPokemon = (newPoke) => {   //transformo pokemon creado en el obj
                 speed: newPoke.speed,
                 weight: newPoke.weight,
                 height: newPoke.height,
+                sprite: newPoke.sprite,
                 types: [newPoke.type1, newPoke.type2],
             }
             const createPoke = await axios.post("http://localhost:3001/pokemons", objNewPoke);
