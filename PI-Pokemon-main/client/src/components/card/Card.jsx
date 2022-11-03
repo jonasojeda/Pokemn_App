@@ -1,23 +1,34 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import  './card.css'
 export default function Card({id,name,img,types}) {
     return (
         <div>
         
-        <div class="card">
-            <div class="face front">
+        <div className="card">
+            <div className="face front">
                 <div className={types[0].name}>
                     <img src={img} alt="" />
                     <h3>{name}</h3>
                 </div>
             </div>
             
-            <div class="face back">
-            <h3>{name}</h3>
-            <div class="link">
-            <a href="#">Details</a>
+            <div className="face back">
+                <h1>{name}</h1>
+                    <div className='type-container'>
+                    <h1>Type</h1>
+                    <ul>
+                        {types.map(t =>{
+                            return <li>{t.name}</li>
+                        })}
+                    </ul>
+                </div>
             
-        </div>
+                <div className="link">
+                <Link to={`/detail:${name}`} >Details</Link> 
+                <div/>
+            
+            </div>
         
 
             </div>

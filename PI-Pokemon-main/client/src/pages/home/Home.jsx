@@ -16,7 +16,6 @@ export default function Home() {
 return (
     <div>
         <NavBar/>
-        {totalPoke.map(p=>console.log(p))}
         <Pokedex totalPoke = {totalPoke} /> 
     </div>
 )

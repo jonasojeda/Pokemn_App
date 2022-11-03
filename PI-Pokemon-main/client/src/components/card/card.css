@@ -35,7 +35,7 @@
 }
 
 .fire{
-    background-color: #78c850
+    background-color: #ee8328
 }
 
 .water{
@@ -65,7 +65,7 @@
     background-color: #78c850;
 }
 
-.fair{
+.fairy{
     background-color: #ffb7fa;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .card .front h3 {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
     height: 45px;
@@ -107,6 +107,8 @@
     color: #fff;
     background: rgba(0,0,0,.4);
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .card .back {
@@ -119,6 +121,13 @@
     justify-content: space-between;
     text-align: center;
     box-shadow: 0 5px 10px #000;
+}
+
+.card .back img {
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    filter: drop-shadow(-2px 2px 15px rgba(0, 0, 0, 0.7));
 }
 
 .card .back .link {
@@ -140,7 +149,10 @@
 .card .back p {
     letter-spacing: 1px;
 } 
-
+.card .back .type-conatiner ul li{
+    margin: 0;
+    padding: 0;
+}
 .card:hover .front {
     transform: perspective(600px) rotateY(180deg);
 }
