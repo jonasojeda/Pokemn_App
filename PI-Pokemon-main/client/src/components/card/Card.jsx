@@ -1,11 +1,28 @@
 import React from 'react'
-
-export default function Card({id,name,img}) {
+import  './card.css'
+export default function Card({id,name,img,types}) {
     return (
         <div>
-            {id}
-            <h1>{name}</h1>
-            <img src={img} alt="" />
+        
+        <div class="card">
+            <div class="face front">
+                <div className={types[0].name}>
+                    <img src={img} alt="" />
+                    <h3>{name}</h3>
+                </div>
+            </div>
+            
+            <div class="face back">
+            <h3>{name}</h3>
+            <div class="link">
+            <a href="#">Details</a>
+            
+        </div>
+        
+
+            </div>
+        </div>
+            
         </div>
     )
 }

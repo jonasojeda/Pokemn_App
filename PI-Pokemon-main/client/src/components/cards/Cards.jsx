@@ -1,11 +1,11 @@
 import React from 'react'
 import Card from '../card/Card'
-import s from './Cards.module.css'
+import './Cards.css'
 
 export default function Cards({pokeCurrent}) {
 
   return (
-    <div>
+    <div className='cards-container'>
       {Array.isArray(pokeCurrent) ?
 				pokeCurrent.map(poke => (
           <Card 
