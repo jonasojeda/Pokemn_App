@@ -21,8 +21,8 @@ export default function Pokedex({totalPoke}) {
             <TypesPokemon setPokeCurrent={setPokeCurrent} />
 
             <Sort totalPoke={totalPoke} pokeCurrent={pokeCurrent} setPokeCurrent={setPokeCurrent}/>
-            
             <Clean/>
+            
             <Cards pokeCurrent={pokeCurrent} />
             <Pagination totalPoke={totalPoke} setPokeCurrent={setPokeCurrent} />
         </div>

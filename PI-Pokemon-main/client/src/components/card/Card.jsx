@@ -25,7 +25,7 @@ export default function Card({id,name,img,types}) {
                 </div>
             
                 <div className="link">
-                <Link to={`/detail:${name}`} >Details</Link> 
+                <Link to={'detail/' + id} >Details</Link> 
                 <div/>
             
             </div>
