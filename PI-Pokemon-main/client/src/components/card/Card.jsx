@@ -16,7 +16,7 @@ export default function Card({id,name,img,types}) {
             <div className="face back">
                 <h1>{name}</h1>
                     <div className='type-container'>
-                    <h1>Type</h1>
+                    <h1 className='type'>Type</h1>
                     <ul>
                         {types.map(t =>{
                             return <li>{t.name}</li>

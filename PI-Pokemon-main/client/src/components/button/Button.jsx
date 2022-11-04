@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import './button.css'
 export default function Button({name, link, className}) {
   return (
     <div>

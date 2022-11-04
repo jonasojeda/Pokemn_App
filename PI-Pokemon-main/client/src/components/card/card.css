@@ -113,14 +113,20 @@
 
 .card .back {
     transform: perspective(600px) rotateY(180deg);
-    background: rgb(3, 35, 54);
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f22394df-9a75-4771-8225-ea50370155c7/d4mh7q5-25a47434-05e7-413b-9934-7c555ab034e8.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2YyMjM5NGRmLTlhNzUtNDc3MS04MjI1LWVhNTAzNzAxNTVjN1wvZDRtaDdxNS0yNWE0NzQzNC0wNWU3LTQxM2ItOTkzNC03YzU1NWFiMDM0ZTguanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.o5MBcxD2GF6ZtvOpSmq2UBuRQ7wTjHLNgYN2f8AOyUU');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     padding: 15px;
-    color: #f3f3f3;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     box-shadow: 0 5px 10px #000;
+}
+.card .back .type{
+    color: #000;
 }
 
 .card .back img {

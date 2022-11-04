@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import {getPokemonName} from '../../actions/actions'
-
+import './search.css'
 
 
 
@@ -27,14 +27,15 @@ export default function Search({setPokeCurrent}) {
     }, [pokeFilter, setPokeCurrent])  //atentos al pokeFilter
 
   return (
-    <div>
+    <div className='container-search'>
         <input
+            className='search'
             placeholder="Search your pokemon"
             type="text"
             value = {inputValue}              //el value se va actualizando
             onChange = {handleInputChange} 
         />
-        <button type='button' onClick={handleClick} >Lupa</button>
+        <button className='search-button' type='button' onClick={handleClick} ><img src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png" alt="" /></button>
     </div>
   )
 }
