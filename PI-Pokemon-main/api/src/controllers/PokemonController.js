@@ -51,7 +51,6 @@ const getPokeById = async (id) => {
     try {
         if (id.length > 2) {
             const searchPokeIdDB = await Pokemon.findOne({where: {id}, include: Type});
-            console.log('POKEMON BASE DE DATOS', searchPokeIdDB)
             let pokedbId = {
                 id: searchPokeIdDB.id,
                 name: searchPokeIdDB.name,
@@ -66,7 +65,7 @@ const getPokeById = async (id) => {
             }
             return pokedbId;
         } else {
-            const searchPokeapiId = await axios.get(`${URL_API_POKEMON_NAME_OR_ID}${id.toString()}`);
+            const searchPokeapiId = await axios.get(`${API_POKEMON_NAME_OR_ID}${id.toString()}`);
             const foundPokeapiId = objPokeApi(searchPokeapiId.data);
             // console.log('foundPokeapi', foundPokeapiId)
             return foundPokeapiId;     //pokemon por id en pokeapi
