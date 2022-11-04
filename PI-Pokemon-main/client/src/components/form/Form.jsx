@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addPokemon, getPokemonsTypes } from '../../actions/actions'
-// import swal from 'sweetalert';
 import validator from './validator'
+import './form.css'
 
 export default function Form() {
 
@@ -50,10 +50,13 @@ export default function Form() {
         })
     }
   return (
-    <main className="form-container">
+    <div className="form-container">
+            <div className=''></div>
+
             <div className="detailCard">
                 <h2 className="title">Create your favorite Pokemon</h2>
             </div>
+
             <div className="pokemonData">
                 <form onSubmit={event => handleSubmit(event)} className='divCreate'>
                     <div className='divInputCreate'>
@@ -140,6 +143,6 @@ export default function Form() {
 
                 </form>
             </div>
-        </main>
-  )
+    </div>
+    )
 }
