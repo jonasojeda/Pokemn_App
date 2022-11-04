@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch} from 'react-router'
+import {Route, Switch, Redirect} from 'react-router'
 import './App.css';
 import LandingPage from './pages/landingPage/LandingPage.jsx';
 import Home from './pages/home/Home.jsx';

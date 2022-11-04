@@ -27,8 +27,8 @@ export default function Pagination({ totalPoke, setPokeCurrent }) {
     <div>
         <div>
         <button onClick={()=>prev()}>Prev</button>
-                <label> {currentPag + 1}  </label>
-                <button onClick={()=>next()}>Next</button>
+          <label> {currentPag + 1}  </label>
+        <button onClick={()=>next()}>Next</button>
         </div>
     </div>
   )

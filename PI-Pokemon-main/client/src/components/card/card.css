@@ -99,7 +99,7 @@
 }
 
 .card .front h3 {
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 45px;
@@ -125,40 +125,29 @@
     text-align: center;
     box-shadow: 0 5px 10px #000;
 }
-.card .back .type{
+.card .back .type-container h2{
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+.card .back .type-container .img-types img{
+    height: 50px;
+}
+.card .back .type-container .img-types{
+    position: relative;
+    height: 30px;
+    color: #000;
+    bottom: -190px;
+}
+
+.card .back .type-container p{
+    position: relative;
+    bottom: -200px;
     color: #000;
 }
 
-.card .back img {
-    object-fit: cover;
-    width:100%;
-    height:100%;
-    filter: drop-shadow(-2px 2px 15px rgba(0, 0, 0, 0.7));
-}
-
-.card .back .link {
-    border-top: solid 1px #f3f3f3;
-    height: 50px;
-    line-height: 50px;
-}
-
-.card .back .link a {
-    color: #f3f3f3;
-}
-
-.card .back h3 {
-    font-size: 30px;
-    margin-top: 20px;
-    letter-spacing: 2px;
-}
-
-.card .back p {
-    letter-spacing: 1px;
-} 
-.card .back .type-conatiner ul li{
-    margin: 0;
-    padding: 0;
-}
 .card:hover .front {
     transform: perspective(600px) rotateY(180deg);
 }

@@ -1,4 +1,5 @@
 .container-search{
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +20,7 @@
 
 .search-button{
     margin-left: 10px;
-    border-radius: 80%;
+    border-radius: 100%;
     border: none;
     background: #ff0000;
     box-shadow: 0 0 4px 1px rgb(0 0 0 / 25%);
