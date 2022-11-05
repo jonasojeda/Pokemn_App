@@ -6,6 +6,7 @@ import Home from './pages/home/Home.jsx';
 import PokemonCreate from './pages/pokemonCreate/PokemonCreate.jsx'
 import PokemonDetail from './pages/pokemonDetail/PokemonDetail.jsx';
 import NotFound from './components/notFound/NotFound';
+import TypesPokemon from './components/typesPokemon/TypesPokemon';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route exact path={"/home"} component={Home} />
         <Route exact path={"/detail:id"} component={PokemonDetail} />
         <Route exact path={"/create"} component={PokemonCreate} />
+        
       </Switch>
 
     </div>

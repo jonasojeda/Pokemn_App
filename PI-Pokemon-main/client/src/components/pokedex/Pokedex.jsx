@@ -22,11 +22,15 @@ export default function Pokedex({totalPoke}) {
             <TypesPokemon setPokeCurrent={setPokeCurrent} />
 
             <Sort totalPoke={totalPoke} pokeCurrent={pokeCurrent} setPokeCurrent={setPokeCurrent}/>
-            <Clean/>
-            {(pokeCurrent.length > 0 || (pokeCurrent.name !== undefined && pokeCurrent.name !== 'AxiosError'))?<Cards pokeCurrent={pokeCurrent}/>:<NotFound/>}
             
+            <Clean/>
+
+            {(pokeCurrent.length > 0 || (pokeCurrent.name !== undefined && pokeCurrent.name !== 'AxiosError'))
+            ?<Cards pokeCurrent={pokeCurrent}/>
+            :<NotFound/>}
             
             <Pagination totalPoke={totalPoke} setPokeCurrent={setPokeCurrent} />
+
         </div>
     )
 }
