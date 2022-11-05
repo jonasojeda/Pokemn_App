@@ -146,7 +146,7 @@ export default function Form() {
                 </div>
 
             </div>
-
+            <img className='red-img' src="https://i.pinimg.com/originals/51/c2/54/51c25482d801d6ff7f80deee727e13c6.png" alt="" />
             
 
             
