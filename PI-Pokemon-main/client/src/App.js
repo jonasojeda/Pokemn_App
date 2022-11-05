@@ -5,6 +5,7 @@ import LandingPage from './pages/landingPage/LandingPage.jsx';
 import Home from './pages/home/Home.jsx';
 import PokemonCreate from './pages/pokemonCreate/PokemonCreate.jsx'
 import PokemonDetail from './pages/pokemonDetail/PokemonDetail.jsx';
+import NotFound from './components/notFound/NotFound';
 
 
 function App() {

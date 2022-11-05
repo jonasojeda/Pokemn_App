@@ -6,6 +6,7 @@ import Search from '../search/Search';
 import TypesPokemon from '../typesPokemon/TypesPokemon';
 import Pagination from '../pagination/Pagination'
 import Sort from '../Sort/Sort';
+import NotFound from '../notFound/NotFound';
 
 export default function Pokedex({totalPoke}) {
     const cards = 12;
@@ -22,8 +23,9 @@ export default function Pokedex({totalPoke}) {
 
             <Sort totalPoke={totalPoke} pokeCurrent={pokeCurrent} setPokeCurrent={setPokeCurrent}/>
             <Clean/>
+            {(pokeCurrent.length > 0 || (pokeCurrent.name !== undefined && pokeCurrent.name !== 'AxiosError'))?<Cards pokeCurrent={pokeCurrent}/>:<NotFound/>}
             
-            <Cards pokeCurrent={pokeCurrent} />
+            
             <Pagination totalPoke={totalPoke} setPokeCurrent={setPokeCurrent} />
         </div>
     )
