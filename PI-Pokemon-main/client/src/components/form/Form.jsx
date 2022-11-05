@@ -51,13 +51,14 @@ export default function Form() {
     }
   return (
     <div className="form-container">
-            <div className=''></div>
 
-            <div className="detailCard">
-                <h2 className="title">Create your favorite Pokemon</h2>
-            </div>
+            <div className='create-container'>
+                <div className="detailCard">
+                    <img height={"50px"} src="https://static.thenounproject.com/png/594337-200.png" alt="" />
+                    <h2 className="title">Create your favorite Pokemon</h2>
+                </div>
 
-            <div className="pokemonData">
+                <div className="pokemonData">
                 <form onSubmit={event => handleSubmit(event)} className='divCreate'>
                     <div className='divInputCreate'>
                         <input
@@ -142,7 +143,13 @@ export default function Form() {
                     </div>
 
                 </form>
+                </div>
+
             </div>
+
+            
+
+            
     </div>
     )
 }
