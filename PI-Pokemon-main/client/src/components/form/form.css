@@ -1,6 +1,6 @@
 .form-container{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -40,4 +40,60 @@
 .form-container .red-img{
     position: relative;
     left: -100px;
+    filter:drop-shadow(2px 2px 2px gray);
+}
+
+.create-container .pokemonData .divCreate{
+    display: flex;
+}
+
+.create-container .pokemonData .divCreate .left .divInputCreate .inputCreate,
+.create-container .pokemonData .divCreate .rigth .divInputCreate .inputCreate{
+    font-size: 25px;
+    margin-top: 5px;
+    padding-left: 35px;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f8f7f7;
+}
+
+.create-container .pokemonData .divCreate .rigth .dropdown .capitalizeText{
+    font-size: 25px;
+    margin-top: 5px;
+    padding-left: 5px;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f8f7f7;
+    font-family: "Rubik",sans-serif;
+}
+
+.create-container .pokemonData .divCreate .left .error-input,
+.create-container .pokemonData .divCreate .rigth .error-input {
+    font-family: "Rubik",sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    color: #eb544d;
+}
+
+.create-container .divCreate .action-button{ 
+    font-size: 25px;
+    position: relative;
+    top: 370px;  
+    right: 220px;
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+    background-color: #e62e1b;
+    color: #fff;
+    font-family: "Rubik",sans-serif;
+    cursor: pointer;
+    border: none;
+    margin-top: 5px;
 }
