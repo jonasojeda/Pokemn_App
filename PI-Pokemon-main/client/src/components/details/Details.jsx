@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import { getPokemonDetail } from '../../actions/actions';
 import imgTypes from '../../assets/helpers/TypesIcon';
 import Loader from '../../pages/loading/Loading.jsx';
+import LevelBar from '../levelBar/LevelBar';
 import './detail.css'
 
 export default function Details() {
@@ -21,11 +22,31 @@ export default function Details() {
         return str.slice(0, num) + '...'
     }
   return (
-    <div className='container-detail'>
+    <div className='detail-container'>
 
       <div className='card-detail'>
-          <div ></div>
+
+      <div>{name}</div>
+
+        <div className='left-container'>
           <img src={sprite} alt="" />
+          
+
+        </div>
+
+        <div className='rigth-container'>
+          <p>{height}</p>
+          <p>{weight}</p> 
+          
+          <LevelBar val={attack}/>
+          <LevelBar val={life}/>
+          <LevelBar val={defense}/>
+          <LevelBar val={speed}/>
+
+          
+        </div>
+        
+          
       </div>
       
     </div>

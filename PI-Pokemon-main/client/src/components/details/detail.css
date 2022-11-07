@@ -1,0 +1,27 @@
+.detail-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:solid 25px #e52521;
+    padding: 1rem;
+    border-radius: 60px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.left-container{
+    margin-right: 60px;
+    border-radius: 60px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+.rigth-container{
+    display: flex;
+    flex-direction: column;
+}
