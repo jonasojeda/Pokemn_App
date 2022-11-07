@@ -26,22 +26,32 @@ export default function Details() {
 
       <div className='card-detail'>
 
-      <div>{name}</div>
+        <div className='name'>#{id} {name}</div>
 
         <div className='left-container'>
           <img src={sprite} alt="" />
-          
-
         </div>
 
         <div className='rigth-container'>
-          <p>{height}</p>
-          <p>{weight}</p> 
+          <div className='general-info'>
+            <div className='general-box'>
+              <p>Height: {Number((height * 0.10).toFixed(1)) } m </p>
+            </div>
+
+            <div className='general-box'>
+              <p>Weight: {Number((weight * 0.10).toFixed(1)) } kg</p> 
+            </div>
+            
+            
+          </div>
+            <div className='specific-box'>
+              <p>Life: {life}</p>
+              <p>Defense: {defense}</p>
+              <p>Attack: {attack}</p>
+              <p>Speed: {speed}</p>
+            </div>
           
-          <LevelBar val={attack}/>
-          <LevelBar val={life}/>
-          <LevelBar val={defense}/>
-          <LevelBar val={speed}/>
+
 
           
         </div>
