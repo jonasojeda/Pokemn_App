@@ -1,4 +1,6 @@
 import React,{ useState } from 'react'
+import arrow from '../../assets/arrows/arrows';
+import './pagination.css'
 
 export default function Pagination({ totalPoke, setPokeCurrent }) {
 
@@ -25,10 +27,10 @@ export default function Pagination({ totalPoke, setPokeCurrent }) {
 
   return (
     <div>
-        <div>
-        <button onClick={()=>prev()}>Prev</button>
+        <div className='pagination-container'>
+        <button className='button-arrow' onClick={()=>prev()}> <img className='arrow left'  src={arrow}  /> </button>
           <label> {currentPag + 1}  </label>
-        <button onClick={()=>next()}>Next</button>
+        <button className='button-arrow' onClick={()=>next()}> <img className='arrow' src={arrow}/></button>
         </div>
     </div>
   )

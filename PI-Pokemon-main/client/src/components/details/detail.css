@@ -1,23 +1,16 @@
 .detail-container{
-    margin-top: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .card-detail{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 19px;
-    grid-row-gap: 14px;
-    }
-    
-    .name-container { 
-        background-color: #e62e1b;
-        grid-area: 1 / 1 / 2 / 5; }
-    .weigth-container { grid-area: 2 / 3 / 3 / 4; }
-    .height-containe { grid-area: 2 / 4 / 3 / 5; }
-    .atrib-container { grid-area: 3 / 3 / 5 / 5; }
-    .id-container { grid-area: 5 / 1 / 6 / 5; }
-    .types-container { grid-area: 3 / 1 / 5 / 3; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:solid 25px #e52521;
+    padding: 1rem;
+    border-radius: 60px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+

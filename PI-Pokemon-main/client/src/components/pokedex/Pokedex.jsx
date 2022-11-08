@@ -24,7 +24,6 @@ export default function Pokedex({totalPoke}) {
             <Sort totalPoke={totalPoke} pokeCurrent={pokeCurrent} setPokeCurrent={setPokeCurrent}/>
             
             <Clean/>
-
             {(pokeCurrent.length > 0 || (pokeCurrent.name !== undefined && pokeCurrent.name !== 'AxiosError'))
             ?<Cards pokeCurrent={pokeCurrent}/>
             :<NotFound/>}
