@@ -33,7 +33,7 @@ const { sprite, life, types, name, height, attack, defense, speed, weight } = po
             </Link>
         </div>
 
-        {(sprite && life && types && name && height && attack && defense && speed && weight)? <Details name={name} sprite={sprite} life={life} types={types} height={height} attack={attack} defense={defense} speed={speed} weight={weight}></Details> : <Loading/> }
+        {(sprite && life && types && name && height && attack && defense && speed && weight)? <Details name={name} sprite={sprite} life={life} types={types} height={height} attack={attack} defense={defense} speed={speed} weight={weight} id={id}></Details> : <Loading/> }
 
         
     </div>
