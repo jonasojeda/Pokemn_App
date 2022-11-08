@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router';
+import { getPokemonDetail } from '../../actions/actions';
 import Details from '../../components/details/Details'
 import NavBar from '../../components/navBar/NavBar'
 import { Link } from 'react-router-dom'
 import './pokemonDetail.css'
+import Loading from '../loading/Loading'
 
 export default function PokemonDetail() {
+    const dispatch = useDispatch();
+    const pokemonDetail = useSelector(state => state.pokemonDetail);
+    const { id } = useParams();
+    useEffect(() => {
+    dispatch(getPokemonDetail(id.slice(1, id.length)))
+    }, [dispatch])
+
+const { sprite, life, types, name, height, attack, defense, speed, weight } = pokemonDetail;
+
+    const truncateString = (str, num) => {
+        if (str.length <= num) return str
+        return str.slice(0, num) + '...'
+    }
     
     return (
     <div className='container-pokemon-detail'>
@@ -15,7 +32,10 @@ export default function PokemonDetail() {
             <a>Return to home</a>
             </Link>
         </div>
-        <Details></Details>
+
+        {(sprite && life && types && name && height && attack && defense && speed && weight)? <Details name={name} sprite={sprite} life={life} types={types} height={height} attack={attack} defense={defense} speed={speed} weight={weight}></Details> : <Loading/> }
+
+        
     </div>
     
     )
