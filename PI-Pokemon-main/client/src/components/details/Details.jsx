@@ -12,11 +12,11 @@ export default function Details({ sprite, life, types, name, height, attack, def
         <div className='info-container'>
           <div class="basic-info"> 
             <div className='hover-box hw-container' >
-              <h2>Height: {(height*0.10)}m</h2>
+              <h2>Height: {Number((height*0.10).toFixed(2))}m</h2>
             </div>
 
             <div className='hover-box hw-container'>
-              <h2>Weight: {(weight*0.10)}kg</h2>
+              <h2>Weight: {Number((weight*0.10).toFixed(2))}kg</h2>
             </div>
 
           </div>
