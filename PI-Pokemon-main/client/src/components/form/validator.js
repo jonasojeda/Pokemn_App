@@ -5,6 +5,7 @@ export default function validator(input) {
         errors.name = 'Name is necessary';
     }
 
+
     if (input.life > 255 || !input.life) {
         errors.life = 'Life is necessary and less than 255';
     }
@@ -28,6 +29,29 @@ export default function validator(input) {
     if (!input.weight) {
         errors.weight = 'Weight is necessary';
     }
+
+    //Select control
+    const t2 = document.getElementById('t2')
+    
+    if(!input.type1){
+        input.type2.disabled=true
+        errors.selected = 'it is necessary to select at least one';
+    }else{
+        t2.disabled=false
+    }
+
+
+    //button control
+    const button = document.getElementById('id-sub')
+    if(input.name && input.life &&  input.attack && input.defense && input.speed && input.height && input.weight && input.type1){
+        button.disable=false
+        button.setAttribute('style', 'opacity: 1;')
+    }else{
+        button.disable=true
+        button.setAttribute('style', 'opacity: 0.5;')
+    }
+    
+
 
     return errors;
 };

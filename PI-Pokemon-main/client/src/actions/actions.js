@@ -66,6 +66,9 @@ export const getPokemonName = (name) => {
 export const addPokemon = (newPoke) => {   //transformo pokemon creado en el objeto que la DB necesita
     return async () => {
         try {
+            if(!newPoke.sprite){
+                newPoke.sprite="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png"
+            }
             const objNewPoke = {
                 name: newPoke.name,
                 life: newPoke.life,

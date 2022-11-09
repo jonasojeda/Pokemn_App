@@ -33,7 +33,6 @@ export default function Form() {
     }
 
     const handleSubmit = event => {
-        // swal("Excellent!", "You created a new pokemon!", "success")
         event.preventDefault();
         dispatch(addPokemon(input));
         setInput({
@@ -128,8 +127,11 @@ export default function Form() {
                                 )}
                             </select>
                         </div>
+                        {errors.selected && (
+                            <p className='error-input'>{errors.selected}</p>
+                        )}
                         <div className="dropdown">
-                            <select name='type2' onChange={handleInputChange} className='capitalizeText'>
+                            <select disabled='true' id='t2' name='type2' onChange={handleInputChange} className='capitalizeText'>
                                 <option value="Type Two">Type Two</option>
                                 {pokeTypes.map(type =>
                                     <option value={type} key={type} className='capitalizeText'>{type}</option>
@@ -139,12 +141,12 @@ export default function Form() {
 
                         {/* Photo */}
                         <div className='divInputCreate'>
-                            <input className='inputCreate' type="text" placeholder="Image" name="sprite" onChange={handleInputChange} value={input.sprite}/>
+                            <input className='inputCreate ph' type="text" placeholder="Image" name="sprite" onChange={handleInputChange} value={input.sprite}/>
                         </div>
                     </div>
 
                     <div>
-                        <button type='submit' className='action-button'> Create </button>
+                        <button id='id-sub' type='submit' className='action-button' name='create' > Create </button>
                     </div>
 
                 </form>
