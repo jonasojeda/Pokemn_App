@@ -1,18 +1,49 @@
 import React from 'react'
 import imgTypes from '../../assets/helpers/TypesIcon';
-import Card from '../card/Card';
 import './detail.css'
 
 export default function Details({ sprite, life, types, name, height, attack, defense, speed, weight, id }) {
   return (
     <div className='detail-container'>
-      
-      <Card
-			id={id}
-			name={name}
-			img={sprite}
-			types={types}/>
-      
+      <div className='card-container'>
+        <div className='detail-card'>
+          <h2>{name}</h2>
+        </div>
+        <div className='info-container'>
+          <div class="basic-info"> 
+            <div className='hover-box hw-container' >
+              <h2>Height: {(height*0.10)}m</h2>
+            </div>
+
+            <div className='hover-box hw-container'>
+              <h2>Weight: {(weight*0.10)}kg</h2>
+            </div>
+
+          </div>
+
+          <div class="hover-box id-container"> 
+            <h2>Id: {id.slice(1, id.length)}</h2>
+          </div>
+
+          <div class="hover-box specific-info">
+            <p><b>Life: {life}</b></p>
+            <p><b>Attack: {attack}</b></p>
+            <p><b>Defense: {defense}</b></p>
+            <p><b>Speed: {speed}</b></p>
+          </div>
+
+          <div class="hover-box type-container">
+            <h2>Type</h2>
+          {types.map(t => {
+                            return(<p><img src={imgTypes[t.name]}/><b>{t.name}</b></p>)
+                            }
+                            )}
+          </div>
+        </div>
+      </div>
+      <div className='img-container' >
+        <img className=' hover-box sprite' src={sprite} alt="" />
+      </div>
     </div>
   )
 }
