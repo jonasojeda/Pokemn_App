@@ -1,6 +1,16 @@
 export default function validator(input) {
+    // El pattern que vamos a comprobar
+    const name =/^[a-zA-ZÀ-ÿ\s]{1,40}$/ ;
+
     let errors = {};
+
+    //Valiodate name input
     
+
+    if(!(name.test(input.name))){
+        errors.name = 'can only enter letters';
+    }
+
     if (!input.name) {
         errors.name = 'Name is necessary';
     }
@@ -31,13 +41,13 @@ export default function validator(input) {
     }
 
     //Select control
-    // const t2 = document.getElementById('t2')
+    const t2 = document.getElementById('t2')
     
-    // if(!input.type1){
-    //     errors.selected = 'it is necessary to select at least one';
-    // }else{
-    //     t2.disabled=false
-    // }
+    if(!input.type1){
+        errors.selected = 'it is necessary to select at least one';
+    }else{
+        t2.disabled=false
+    }
 
 
     //button control
