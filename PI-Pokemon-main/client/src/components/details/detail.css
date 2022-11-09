@@ -94,7 +94,7 @@
     box-shadow: rgb(0 0 0 / 19%) 0px 10px 20px, rgb(0 0 0 / 23%) 0px 6px 6px;
 
 }
-.type-container { 
+.types-container { 
     grid-area: 1 / 1 / 3 / 3;
     margin: 10px;
     display: flex;
@@ -107,7 +107,7 @@
 
 }
 
-.type-container img{
+.types-container img{
     margin-top: 10px;
     height: 50px;
 }

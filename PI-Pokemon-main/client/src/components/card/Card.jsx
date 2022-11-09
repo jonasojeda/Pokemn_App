@@ -10,7 +10,7 @@ export default function Card({id,name,img,types}) {
 
                 <div className="face front">
                     <div className={types[0].name}>
-                        {(img!=true ?<img src={img} alt="" />:<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/800px-Pok%C3%A9_Ball_icon.svg.png' alt="" /> )}
+                        {(img!==true ?<img src={img} alt="" />:<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/800px-Pok%C3%A9_Ball_icon.svg.png' alt="" /> )}
                         
                         <h3>{name}</h3>
                     </div>

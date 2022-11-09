@@ -1,11 +1,8 @@
 import React from 'react'
 import Button from '../button/Button.jsx'
-import {useDispatch} from 'react-redux'
 import { Link } from 'react-router-dom'
-import { getPokemons } from '../../actions/actions'
 import './NavBar.css'
 export default function NavBar() {
-    const dispatch = useDispatch();
     return (
         <div className='nav-bar'>
             <div className='container'>

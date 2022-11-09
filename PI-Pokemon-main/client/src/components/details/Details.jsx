@@ -32,7 +32,7 @@ export default function Details({ sprite, life, types, name, height, attack, def
             <p><b>Speed: {speed}</b></p>
           </div>
 
-          <div class="hover-box type-container">
+          <div class="hover-box types-container">
             <h2>Type</h2>
           {types.map(t => {
                             return(<p><img src={imgTypes[t.name]}/><b>{t.name}</b></p>)

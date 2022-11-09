@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { getPokemonDetail } from '../../actions/actions';
 import Details from '../../components/details/Details'
-import NavBar from '../../components/navBar/NavBar'
 import { Link } from 'react-router-dom'
 import './pokemonDetail.css'
 import Loading from '../loading/Loading'

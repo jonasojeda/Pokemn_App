@@ -4,7 +4,7 @@ import { getPokemons } from '../../actions/actions.js';
 import NavBar from '../../components/navBar/NavBar.jsx';
 import Pokedex from '../../components/pokedex/Pokedex.jsx';
 import Loading from '../loading/Loading'
-import s from './Home.module.css'
+
 export default function Home() {
 
     const dispatch = useDispatch();

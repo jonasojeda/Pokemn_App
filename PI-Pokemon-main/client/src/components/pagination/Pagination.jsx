@@ -28,9 +28,9 @@ export default function Pagination({ totalPoke, setPokeCurrent }) {
   return (
     <div>
         <div className='pagination-container'>
-        <button className='button-arrow' onClick={()=>prev()}> <img className='arrow-left arrow '  src={arrow}  /> </button>
+        <button className='button-arrow' onClick={()=>prev()}> <img className='arrow-left arrow '  src={arrow} alt='left' /> </button>
           <label> {currentPag + 1}  </label>
-        <button className='button-arrow' onClick={()=>next()}> <img className='arrow' src={arrow}/></button>
+        <button className='button-arrow' onClick={()=>next()}> <img className='arrow' src={arrow} alt='rigth'/></button>
         </div>
     </div>
   )

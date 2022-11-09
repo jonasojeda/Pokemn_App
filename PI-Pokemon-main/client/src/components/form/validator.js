@@ -31,14 +31,13 @@ export default function validator(input) {
     }
 
     //Select control
-    const t2 = document.getElementById('t2')
+    // const t2 = document.getElementById('t2')
     
-    if(!input.type1){
-        input.type2.disabled=true
-        errors.selected = 'it is necessary to select at least one';
-    }else{
-        t2.disabled=false
-    }
+    // if(!input.type1){
+    //     errors.selected = 'it is necessary to select at least one';
+    // }else{
+    //     t2.disabled=false
+    // }
 
 
     //button control
