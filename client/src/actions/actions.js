@@ -80,7 +80,7 @@ export const addPokemon = (newPoke) => {   //transformo pokemon creado en el obj
                 sprite: newPoke.sprite,
                 types: [newPoke.type1, newPoke.type2],
             }
-            const createPoke = await axios.post("/pokemons", objNewPoke);
+            const createPoke = await axios.post("https://pokemnapp-production.up.railway.app/pokemons", objNewPoke);
             return console.log(createPoke.data)
         } catch (error) {
             console.log(error)
