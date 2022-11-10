@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import logo from '../../assets/logos/logo.png'
 import gif from '../../assets/gifLoad/gif'
 import media from '../../assets/media/media'
+import redes from '../../assets/redSocial/redSocial'
 import'./LandingPage.css';
 
 
@@ -17,8 +18,8 @@ export default function LandingPage() {
                     <Link to={'/home'} ><button className='landing-button'><b>Let's go!</b></button></Link>
                     
                     <div className='media-container'>
-                        <a href="#"><img className='media in' src={media.lin} alt="" /></a>
-                        <a href="#"><img className='media git' src={media.git} alt="" /></a>
+                        <a href={redes.linkedin} target='_blank'><img className='media in' src={media.lin} alt="" /></a>
+                        <a href={redes.gitHub} target='_blank' ><img className='media git' src={media.git} alt="" /></a>
                     </div>
                 
                 </div>
