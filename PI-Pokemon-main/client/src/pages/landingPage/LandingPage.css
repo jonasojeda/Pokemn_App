@@ -13,7 +13,7 @@
     filter:drop-shadow(5px 5px 5px gray);
 }
 
-.rigth{
+.landing-rigth{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +23,7 @@
     padding: 180px;
 }
 
-.left{
+.landing-left{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,7 +32,7 @@
     padding-bottom: 5px;
 }
 
-.left h1{
+.landing-left h1{
     margin-left: 0;
     font-size: 60px;
 }
@@ -42,7 +42,7 @@
     align-items: center;
     align-content: center;
 }
-.left p{
+.landing-left p{
     text-justify: auto;
 }
 .media{

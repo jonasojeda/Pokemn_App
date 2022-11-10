@@ -11,7 +11,7 @@ export default function LandingPage() {
     return (
         <div>
             <div className='landing-container'>
-                <div className='left'>
+                <div className='landing-left'>
                     <img className='landing-logo' src={logo} alt="" />
                     <h1>¡Welcome to your pokedex!</h1>
                     <p>Here you can find all the info from your favorite pokemons. Also you can let your creativity fly and create a new exclusive pokemon! I hope you like it :)</p>
@@ -23,7 +23,7 @@ export default function LandingPage() {
                     </div>
                 
                 </div>
-                <div className='rigth'>
+                <div className='landing-rigth'>
                     <img src={gif.landingPokeball} alt="" />
                 </div>
             </div>
