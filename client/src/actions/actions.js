@@ -2,7 +2,6 @@ import axios from 'axios';
 
 export const getPokemons = () => {
     return async (dispatch) => {
-        console.log("Estoy en el get Pokemons")
         try {
             const dataPokemons = await axios.get("https://pokemnapp-production.up.railway.app/pokemons");  //Back
             return dispatch({
@@ -18,7 +17,7 @@ export const getPokemons = () => {
 export const getPokemonsTypes = () => {
     return async (dispatch) => {
         try {
-            const typePokemons = await axios.get("/types");
+            const typePokemons = await axios.get("https://pokemnapp-production.up.railway.app/types");
             return dispatch({
                 type: 'GET_TYPE',
                 payload: typePokemons.data
@@ -39,7 +38,7 @@ export const filterType = (type) => {
 export const getPokemonDetail = (id) => {
     return async (dispatch) => {
         try {
-            const pokemon = await axios(`/pokemons/${id}`);
+            const pokemon = await axios(`https://pokemnapp-production.up.railway.app/pokemons/${id}`);
             return dispatch({
                 type: 'GET_POKEMON_DETAIL',
                 payload: pokemon.data
@@ -53,7 +52,7 @@ export const getPokemonDetail = (id) => {
 export const getPokemonName = (name) => {
     return async (dispatch) => {
         try {
-            const pokemonName = await axios(`/pokemons?name=${name}`);
+            const pokemonName = await axios(`https://pokemnapp-production.up.railway.app/pokemons?name=${name}`);
             return dispatch({
                 type: 'GET_POKEMON_NAME',
                 payload: pokemonName.data
