@@ -11,7 +11,11 @@ import NotFound from '../notFound/NotFound';
 export default function Pokedex({totalPoke}) {
     const cards = 12;
     const [pokeCurrent, setPokeCurrent] = useState(totalPoke);   //lo cargo
-    
+
+    useEffect(()=>{
+        setPokeCurrent([...totalPoke])
+    },[totalPoke])
+
     useEffect( () => {
         setPokeCurrent([...totalPoke].slice(0,cards))  //copia del totalPoke
     },[totalPoke])

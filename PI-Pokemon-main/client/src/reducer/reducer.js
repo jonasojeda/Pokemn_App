@@ -33,6 +33,7 @@ export const rootReducer = (state = initialState, action) => {
 				...state,
 				pokemonsFilter: state.pokemonsTotal.filter(poke => poke.types.map(type => type.name)[0] === action.payload || poke.types.map(type => type.name)[1] === action.payload)
 			};
+
 		default:
 			return state;
 	}

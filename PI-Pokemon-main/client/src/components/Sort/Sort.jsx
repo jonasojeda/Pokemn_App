@@ -54,18 +54,18 @@ export default function Sort({pokeCurrent, setPokeCurrent, totalPoke}) {
 
 
 
-  return (
-    <div>
-        <div className="dropdown">
-                <select className='capitalizeText' name="order_filter" onChange={filterAndOrderBy} value={event}>
-                    <option>Filter/Order by</option>
-                    <option className='capitalizeText' value="asc">A to Z</option>
-                    <option className='capitalizeText' value="desc">Z to A</option>
-                    <option className='capitalizeText' value="more_attack">Attack +</option>
-                    <option className='capitalizeText' value="less_attack">Attack -</option>
-                    <option className='capitalizeText' value="my_poke">My pokemons</option>
-                </select>
-            </div>
-    </div>
-  )
-}
+    return (
+        <div>
+            <div className="dropdown">
+                    <select className='capitalizeText' name="order_filter" onChange={filterAndOrderBy} value={event}>
+                        <option>Filter/Order by</option>
+                        <option className='capitalizeText' value="asc">A to Z</option>
+                        <option className='capitalizeText' value="desc">Z to A</option>
+                        <option className='capitalizeText' value="more_attack">Attack +</option>
+                        <option className='capitalizeText' value="less_attack">Attack -</option>
+                        <option className='capitalizeText' value="my_poke">My pokemons</option>
+                    </select>
+                </div>
+        </div>
+    )
+    }
