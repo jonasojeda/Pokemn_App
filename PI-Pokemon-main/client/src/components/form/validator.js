@@ -16,20 +16,20 @@ export default function validator(input) {
     }
 
 
-    if (input.life > 255 || !input.life) {
-        errors.life = 'Life is necessary and less than 255';
+    if (input.life > 255 || !input.life || input.life < 1) {
+        errors.life = 'Life is required and must be between 1 and 255';
     }
 
-    if (input.attack > 255 || !input.attack ) {
-        errors.attack = 'Attack is necessary and less than 255';
+    if (input.attack > 255 || !input.attack || input.attack < 1 ) {
+        errors.attack = 'Attack is necessary and must be between 1 and 255';
     }
 
-    if (input.defense > 255 || !input.defense) {
-        errors.defense = 'Defense is necessary and less than 255';
+    if (input.defense > 255 || !input.defense || input.defense < 1) {
+        errors.defense = 'Defense is necessary and must be between 1 and 255';
     }
 
-    if (input.speed > 255 || !input.speed) {
-        errors.speed = 'Speed is necessary and less than 255';
+    if (input.speed > 255 || !input.speed || input.speed < 1) {
+        errors.speed = 'Speed is necessary and must be between 1 and 255';
     }
 
     if (!input.height) {
@@ -44,7 +44,7 @@ export default function validator(input) {
     const t2 = document.getElementById('t2')
     
     if(!input.type1){
-        errors.selected = 'it is necessary to select at least one';
+        errors.selected = 'type at least one is required';
     }else{
         t2.disabled=false
     }

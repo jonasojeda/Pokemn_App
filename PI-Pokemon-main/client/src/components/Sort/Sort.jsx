@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './sort.css'
 
 export default function Sort({pokeCurrent, setPokeCurrent, totalPoke}) {
     const [event] = useState("");       //event en estado inicial
@@ -56,13 +57,13 @@ export default function Sort({pokeCurrent, setPokeCurrent, totalPoke}) {
   return (
     <div>
         <div className="dropdown">
-                <select name="order_filter" onChange={filterAndOrderBy} value={event}>
+                <select className='capitalizeText' name="order_filter" onChange={filterAndOrderBy} value={event}>
                     <option>Filter/Order by</option>
-                    <option value="asc">A to Z</option>
-                    <option value="desc">Z to A</option>
-                    <option value="more_attack">Attack +</option>
-                    <option value="less_attack">Attack -</option>
-                    <option value="my_poke">My pokemons</option>
+                    <option className='capitalizeText' value="asc">A to Z</option>
+                    <option className='capitalizeText' value="desc">Z to A</option>
+                    <option className='capitalizeText' value="more_attack">Attack +</option>
+                    <option className='capitalizeText' value="less_attack">Attack -</option>
+                    <option className='capitalizeText' value="my_poke">My pokemons</option>
                 </select>
             </div>
     </div>
