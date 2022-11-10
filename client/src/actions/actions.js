@@ -2,8 +2,9 @@ import axios from 'axios';
 
 export const getPokemons = () => {
     return async (dispatch) => {
+        console.log("Estoy en el get Pokemons")
         try {
-            const dataPokemons = await axios.get("/pokemons");  //Back
+            const dataPokemons = await axios.get("https://pokemnapp-production.up.railway.app/pokemons");  //Back
             return dispatch({
                 type: 'GET_POKEMONS',
                 payload: dataPokemons.data
