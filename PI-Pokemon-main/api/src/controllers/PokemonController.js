@@ -36,10 +36,11 @@ const getPokedb = async () => {
 
 const getAllPoke = async () => {
     try {
-        const apiPokeData = await getPokeapi();
         const dbPokeData = await getPokedb();
+        const apiPokeData = await getPokeapi();
+        
         //console.log(dbPokeData)
-        return [...apiPokeData, ...dbPokeData];
+        return [...dbPokeData,...apiPokeData];
 
     } catch (error) {
         console.log(error);
