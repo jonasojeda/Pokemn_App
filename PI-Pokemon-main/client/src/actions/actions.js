@@ -75,8 +75,8 @@ export const addPokemon = (newPoke) => {   //transformo pokemon creado en el obj
                 attack: newPoke.attack,
                 defense: newPoke.defense,
                 speed: newPoke.speed,
-                weight: newPoke.weight,
-                height: newPoke.height,
+                weight: newPoke.weight*10,
+                height: newPoke.height*10,
                 sprite: newPoke.sprite,
                 types: [newPoke.type1, newPoke.type2],
             }

@@ -17,15 +17,19 @@ module.exports = (sequelize) => {   //modelos sequelize
     //hp
     life: {           
       type: DataTypes.INTEGER,
+      validate: { min: 1, max: 255},
     },
     attack: {               
       type: DataTypes.INTEGER,
+      validate: { min: 1, max: 255},
     },
     defense: {
       type: DataTypes.INTEGER,
+      validate: { min: 1, max: 255},
     },
     speed: {
       type: DataTypes.INTEGER,
+      validate: { min: 1, max: 255},
     },
     height: {
       type: DataTypes.INTEGER,
