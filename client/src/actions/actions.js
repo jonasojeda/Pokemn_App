@@ -3,7 +3,7 @@ import axios from 'axios';
 export const getPokemons = () => {
     return async (dispatch) => {
         try {
-            const dataPokemons = await axios.get("/pokemons");  //Back
+            const dataPokemons = await axios.get("https://pokemnapp-production.up.railway.app/pokemons");  //Back
             return dispatch({
                 type: 'GET_POKEMONS',
                 payload: dataPokemons.data
@@ -38,7 +38,7 @@ export const filterType = (type) => {
 export const getPokemonDetail = (id) => {
     return async (dispatch) => {
         try {
-            const pokemon = await axios(`/pokemons/${id}`);
+            const pokemon = await axios(`https://pokemnapp-production.up.railway.app/pokemons/${id}`);
             return dispatch({
                 type: 'GET_POKEMON_DETAIL',
                 payload: pokemon.data
@@ -52,7 +52,7 @@ export const getPokemonDetail = (id) => {
 export const getPokemonName = (name) => {
     return async (dispatch) => {
         try {
-            const pokemonName = await axios(`/pokemons?name=${name}`);
+            const pokemonName = await axios(`https://pokemnapp-production.up.railway.app/pokemons?name=${name}`);
             return dispatch({
                 type: 'GET_POKEMON_NAME',
                 payload: pokemonName.data
@@ -80,7 +80,7 @@ export const addPokemon = (newPoke) => {   //transformo pokemon creado en el obj
                 sprite: newPoke.sprite,
                 types: [newPoke.type1, newPoke.type2],
             }
-            const createPoke = await axios.post("/pokemons", objNewPoke);
+            const createPoke = await axios.post("https://pokemnapp-production.up.railway.app/pokemons", objNewPoke);
             alert("Pokemon Creado con exito")
             return console.log(createPoke.data)
 
