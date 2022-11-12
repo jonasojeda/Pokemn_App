@@ -134,7 +134,7 @@ const objPokeApi = (poke) => {
 //permite hacer post de pokemon
 
 const postPokedb = async (pokeData) => {
-    try {
+    //try {
         const { name, life, attack, defense, speed, height, weight, sprite, types } = pokeData;
         const myPoke = await Pokemon.create(
             {
@@ -154,10 +154,10 @@ const postPokedb = async (pokeData) => {
 
         let createdMyPoke = myPoke.addType(pokeTypedb);
         return createdMyPoke;
-    } catch (error) {
-        console.log(error);
-        return error;
-    }
+    // } catch (error) {
+    //     console.log(error);
+    //     return error;
+    // }
 };
 
 

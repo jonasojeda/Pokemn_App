@@ -60,7 +60,7 @@ export default function validator(input) {
         button.setAttribute('style', 'opacity: 0.5;')
     }
     
-
+    
 
     return errors;
 };
