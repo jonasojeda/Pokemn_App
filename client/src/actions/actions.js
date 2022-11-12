@@ -3,7 +3,7 @@ import axios from 'axios';
 export const getPokemons = () => {
     return async (dispatch) => {
         try {
-            const dataPokemons = await axios.get("http://localhost:3001/pokemons");  //Back
+            const dataPokemons = await axios.get("/pokemons");  //Back
             return dispatch({
                 type: 'GET_POKEMONS',
                 payload: dataPokemons.data
@@ -17,7 +17,7 @@ export const getPokemons = () => {
 export const getPokemonsTypes = () => {
     return async (dispatch) => {
         try {
-            const typePokemons = await axios.get("http://localhost:3001/types");
+            const typePokemons = await axios.get("/types");
             return dispatch({
                 type: 'GET_TYPE',
                 payload: typePokemons.data
@@ -38,7 +38,7 @@ export const filterType = (type) => {
 export const getPokemonDetail = (id) => {
     return async (dispatch) => {
         try {
-            const pokemon = await axios(`http://localhost:3001/pokemons/${id}`);
+            const pokemon = await axios(`/pokemons/${id}`);
             return dispatch({
                 type: 'GET_POKEMON_DETAIL',
                 payload: pokemon.data
@@ -52,7 +52,7 @@ export const getPokemonDetail = (id) => {
 export const getPokemonName = (name) => {
     return async (dispatch) => {
         try {
-            const pokemonName = await axios(`http://localhost:3001/pokemons?name=${name}`);
+            const pokemonName = await axios(`/pokemons?name=${name}`);
             return dispatch({
                 type: 'GET_POKEMON_NAME',
                 payload: pokemonName.data
@@ -80,7 +80,7 @@ export const addPokemon = (newPoke) => {   //transformo pokemon creado en el obj
                 sprite: newPoke.sprite,
                 types: [newPoke.type1, newPoke.type2],
             }
-            const createPoke = await axios.post("http://localhost:3001/pokemons", objNewPoke);
+            const createPoke = await axios.post("/pokemons", objNewPoke);
             alert("Pokemon Creado con exito")
             return console.log(createPoke.data)
 
