@@ -17,7 +17,7 @@ export const getPokemons = () => {
 export const getPokemonsTypes = () => {
     return async (dispatch) => {
         try {
-            const typePokemons = await axios.get("/types");
+            const typePokemons = await axios.get("https://pokemnapp-production.up.railway.app/types");
             return dispatch({
                 type: 'GET_TYPE',
                 payload: typePokemons.data
